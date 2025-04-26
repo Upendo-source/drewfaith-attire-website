@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop DrewFaith Attire Collection for premium clothing and footwear. Elevate your style today!">
+    <title>DrewFaith Attire Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50">
+    <!-- Header with Sticky Navigation -->
+    <header class="bg-gradient-to-r from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">DrewFaith Attire</div>
+            <ul class="flex space-x-6">
+                <li><a href="shop.html" class="hover:text-gray-200">Shop</a></li>
+                <li><a href="about.html" class="hover:text-gray-200">About</a></li>
+                <li><a href="#reviews" class="hover:text-gray-200">Reviews</a></li>
+                <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-500 to-red-500 text-white">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Elevate Your Style with DrewFaith</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Premium clothing and footwear crafted for comfort, quality, and bold fashion.</p>
+            <a href="shop.html" class="inline-block bg-white text-amber-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section with Filters and Carousel -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Collection</h2>
+            <!-- Filters -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="filter-btn px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="streetwear">Streetwear</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="sneakers">Sneakers</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="casual">Casual</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="accessories">Accessories</button>
+            </div>
+            <!-- Size Guide Button -->
+            <div class="text-center mb-8">
+                <button id="sizeGuideBtn" class="text-amber-600 font-semibold hover:underline">View Size Guide</button>
+            </div>
+            <!-- Carousel -->
+            <div class="relative overflow-hidden">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="streetwear">
+                        <img src="https://via.placeholder.com/300x200?text=Streetwear" alt="Streetwear" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Streetwear Vibes</h3>
+                        <p class="text-gray-600">Bold, urban-inspired clothing for the modern trendsetter.</p>
+                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
+                    </div>
+                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="sneakers">
+                        <img src="https://via.placeholder.com/300x200?text=Sneakers" alt="Sneakers" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Signature Sneakers</h3>
+                        <p class="text-gray-600">Step up your game with stylish, comfortable footwear.</p>
+                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
+                    </div>
+                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="casual">
+                        <img src="https://via.placeholder.com/300x200?text=Casual" alt="Casual Wear" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Casual Elegance</h3>
+                        <p class="text-gray-600">Effortless style for everyday wear, crafted with care.</p>
+                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
+                    </div>
+                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="accessories">
+                        <img src="https://via.placeholder.com/300x200?text=Accessories" alt="Accessories" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Trendy Accessories</h3>
+                        <p class="text-gray-600">Complete your look with our curated hats and bags.</p>
+                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
+                    </div>
+                </div>
+                <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700">←</button>
+                <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Modal -->
+    <div id="sizeGuideModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Size Guide</h3>
+            <p class="text-gray-600 mb-4">Use our size chart to find the perfect fit for DrewFaith clothing and footwear.</p>
+            <img src="https://via.placeholder.com/600x400?text=Size+Chart" alt="Size Chart" class="w-full mb-4">
+            <table class="w-full text-left border-collapse mb-4">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="p-2">Size</th>
+                        <th class="p-2">Chest (in)</th>
+                        <th class="p-2">Waist (in)</th>
+                        <th class="p-2">Shoe (US)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="p-2">S</td><td class="p-2">34-36</td><td class="p-2">28-30</td><td class="p-2">7-8</td></tr>
+                    <tr><td class="p-2">M</td><td class="p-2">38-40</td><td class="p-2">32-34</td><td class="p-2">8.5-9.5</td></tr>
+                    <tr><td class="p-2">L</td><td class="p-2">42-44</td><td class="p-2">36-38</td><td class="p-2">10-11</td></tr>
+                    <tr><td class="p-2">XL</td><td class="p-2">46-48</td><td class="p-2">40-42</td><td class="p-2">11.5-12</td></tr>
+                </tbody>
+            </table>
+            <button id="closeModalBtn" class="bg-amber-600 text-white py-2 px-4 rounded-lg hover:bg-amber-700">Close</button>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <p class="text-gray-600 mb-4">"The sneakers are super comfy and stylish! DrewFaith never disappoints."</p>
+                    <p class="font-semibold">– Sarah M.</p>
+                    <div class="text-amber-500">★★★★★</div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <p class="text-gray-600 mb-4">"Love the streetwear collection. Perfect fit and great quality!"</p>
+                    <p class="font-semibold">– James T.</p>
+                    <div class="text-amber-500">★★★★☆</div>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <p class="text-gray-600 mb-4">"Fast shipping and amazing customer service. My new favorite brand!"</p>
+                    <p class="font-semibold">– Emma L.</p>
+                    <div class="text-amber-500">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Feed Section -->
+    <section id="social" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Join Our Community</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x300?text=Social+Post+1" alt="Social Post 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">"Rocking my new DrewFaith sneakers! #DrewFaithStyle"</p>
+                        <p class="text-amber-600 font-semibold mt-2">@drewfaithfan</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x300?text=Social+Post+2" alt="Social Post 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">"Obsessed with the streetwear vibe! 😍 #DrewFaithAttire"</p>
+                        <p class="text-amber-600 font-semibold mt-2">@fashionlover</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/300x300?text=Social+Post+3" alt="Social Post 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">"Just got my DrewFaith hat! Perfect fit! #BoldFashion"</p>
+                        <p class="text-amber-600 font-semibold mt-2">@styleicon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://instagram.com" target="_blank" class="text-amber-600 font-semibold hover:underline">Follow us on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Mailchimp Email Signup -->
+    <section id="cta" class="py-20 bg-amber-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Limited-Time Offer!</h2>
+            <p class="text-lg mb-4 max-w-xl mx-auto">Get 20% off your first purchase. Offer ends soon!</p>
+            <div id="countdown" class="text-xl font-semibold mb-8">
+                <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+            </div>
+            <!-- Mailchimp Signup Form -->
+            <div class="flex justify-center">
+                <!-- Replace YOUR_MAILCHIMP_FORM_ACTION with your Mailchimp form action URL -->
+                <form action="YOUR_MAILCHIMP_FORM_ACTION" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex justify-center">
+                    <input type="email" name="EMAIL" placeholder="Enter your email" class="py-3 px-4 rounded-l-lg text-gray-900 focus:outline-none" required>
+                    <button type="submit" class="bg-red-600 py-3 px-6 rounded-r-lg font-semibold hover:bg-red-700 transition">Subscribe</button>
+                </form>
+            </div>
+            <p class="text-sm mt-4">Sign up to join our mailing list. You can unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section with Formspree -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <!-- Formspree Form -->
+                <form action="https://formspree.io/f/xyzwzdye" method="POST" id="contact-form">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_next" value="/#contact">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" name="_replyto" id="email" placeholder="Your Email" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea name="message" id="message" placeholder="Your Message" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600 h-32" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-amber-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-6">
+            <p>© 2025 DrewFaith Attire Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Product Carousel
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        const totalItems = carousel.children.length;
+        const isMobile = window.innerWidth < 768;
+
+        function updateCarousel() {
+            const itemWidth = isMobile ? 100 : 33.33;
+            carousel.style.transform = `translateX(-${currentIndex * itemWidth}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        // Auto-scroll carousel every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+
+        // Product Filters
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                // Update button- button styles
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-amber-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-900');
+                });
+                button.classList.remove('bg-gray-200', 'text-gray-900');
+                button.classList.add('bg-amber-600', 'text-white');
+
+                // Filter products
+                productItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                // Reset carousel to first item
+                currentIndex = 0;
+                updateCarousel();
+            });
+        });
+
+        // Size Guide Modal
+        const sizeGuideBtn = document.getElementById('sizeGuideBtn');
+        const sizeGuideModal = document.getElementById('sizeGuideModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        sizeGuideBtn.addEventListener('click', () => {
+            sizeGuideModal.classList.remove('hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            sizeGuideModal.classList.add('hidden');
+        });
+
+        // Countdown Timer
+        const countdownDate = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 3 days from now
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').textContent = 'Offer Expired!';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>  

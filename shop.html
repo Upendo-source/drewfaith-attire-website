@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop DrewFaith Attire Collection for premium clothing and footwear.">
+    <title>Shop - DrewFaith Attire Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">DrewFaith Attire</div>
+            <ul class="flex space-x-6">
+                <li><a href="shop.html" class="hover:text-gray-200">Shop</a></li>
+                <li><a href="about.html" class="hover:text-gray-200">About</a></li>
+                <li><a href="index.html#reviews" class="hover:text-gray-200">Reviews</a></li>
+                <li><a href="index.html#contact" class="hover:text-gray-200">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6">Shop Our Collection</h2>
+            <!-- Filters -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="filter-btn px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="streetwear">Streetwear</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="sneakers">Sneakers</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="casual">Casual</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="accessories">Accessories</button>
+            </div>
+            <!-- Size Guide Button -->
+            <div class="text-center mb-8">
+                <a href="index.html#products" class="text-amber-600 font-semibold hover:underline">View Size Guide</a>
+            </div>
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="streetwear">
+                    <img src="https://via.placeholder.com/300x200?text=Streetwear" alt="Streetwear" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Streetwear Vibes</h3>
+                    <p class="text-gray-600">$59.99</p>
+                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="sneakers">
+                    <img src="https://via.placeholder.com/300x200?text=Sneakers" alt="Sneakers" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Signature Sneakers</h3>
+                    <p class="text-gray-600">$89.99</p>
+                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="casual">
+                    <img src="https://via.placeholder.com/300x200?text=Casual" alt="Casual Wear" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Casual Elegance</h3>
+                    <p class="text-gray-600">$49.99</p>
+                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="accessories">
+                    <img src="https://via.placeholder.com/300x200?text=Accessories" alt="Accessories" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Trendy Accessories</h3>
+                    <p class="text-gray-600">$29.99</p>
+                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-6">
+            <p>© 2025 DrewFaith Attire Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Product Filters
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                // Update button styles
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-amber-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-900');
+                });
+                button.classList.remove('bg-gray-200', 'text-gray-900');
+                button.classList.add('bg-amber-600', 'text-white');
+
+                // Filter products
+                productItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
