@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J22FNJG4B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3J22FNJG4B');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shop DrewFaith Attire Collection for premium clothing and footwear. Elevate your style today!">
@@ -9,7 +18,7 @@
 </head>
 <body class="font-sans antialiased text-gray-900 bg-gray-50">
     <!-- Header with Sticky Navigation -->
-    <header class="bg-gradient-to-r from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
+    <header class="Images/drewfaithattire header.png forEach from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold">DrewFaith Attire</div>
             <ul class="flex space-x-6">
@@ -300,7 +309,7 @@
         });
 
         // Countdown Timer
-        const countdownDate = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 3 days from now
+        const countdownDate = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 7 days from now
         const countdown = setInterval(() => {
             const now = new Date().getTime();
             const distance = countdownDate - now;
