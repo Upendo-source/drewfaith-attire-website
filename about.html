@@ -1,40 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about AU Divine Designs Collection’s mission and story.">
-    <title>About - AU Divine Designs Collection</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the story, values, and creative vision behind AU Divine Designs — Light in Pieces.">
+  <meta name="theme-color" content="#292925">
+  <title>About Us | AU Divine Designs — Light in Pieces</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; }
+    body { background: #f8f6f0; }
+    .brand-gold { color: #c6ad70; }
+    .brand-bg { background: #292925; }
+    .gold-button { background: #b49a5a; color: #211f19; }
+    .gold-button:hover { background: #d0b978; }
+    .focus-gold:focus-visible { outline: 3px solid #c6ad70; outline-offset: 3px; }
+  </style>
 </head>
-<body class="font-sans antialiased text-gray-900 bg-gray-50">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">AU Divine Designs </div>
-            <ul class="flex space-x-6">
-                <li><a href="shop.html" class="hover:text-gray-200">Shop</a></li>
-                <li><a href="about.html" class="hover:text-gray-200">About</a></li>
-                <li><a href="index.html#reviews" class="hover:text-gray-200">Reviews</a></li>
-                <li><a href="index.html#contact" class="hover:text-gray-200">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="font-sans antialiased text-stone-900">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2">Skip to content</a>
 
-    <!-- About Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">About AU Divine Designs</h2>
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg text-gray-600 mb-6">Founded in 2026, AU Divine Designs Collection is dedicated to creating premium clothing and footwear that empower individuals to express their unique style. Our mission is to blend comfort, quality, and bold fashion, crafting pieces that inspire confidence and creativity.</p>
-                <p class="text-lg text-gray-600 mb-6">From streetwear to elegant casuals, every item is designed with care, using sustainable materials and ethical production practices. We believe fashion is more than clothing—it’s a statement of who you are.</p>
-                <p class="text-lg text-gray-600">Join our community and elevate your style with AU Divine Designs.</p>
-                <a href="shop.html" class="inline-block mt-8 bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-amber-700 transition">Shop Now</a>
+  <!-- Site header -->
+  <header class="brand-bg sticky top-0 z-50 border-b border-[#b49a5a]/40 shadow-lg">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8" aria-label="Main navigation">
+      <a href="index.html" class="focus-gold flex flex-col leading-tight text-white no-underline" aria-label="AU Divine Designs home">
+        <span class="text-xl font-semibold tracking-wide sm:text-2xl">AU Divine Designs</span>
+        <span class="mt-1 text-[0.65rem] uppercase tracking-[0.28em] brand-gold">Light in Pieces</span>
+      </a>
+      <button id="menu-toggle" class="focus-gold rounded-md border border-white/30 px-3 py-2 text-sm text-white sm:hidden" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <ul id="site-menu" class="hidden absolute left-0 right-0 top-full flex-col gap-1 border-b border-[#b49a5a]/40 brand-bg px-5 py-4 text-sm text-white sm:static sm:flex sm:flex-row sm:items-center sm:gap-7 sm:border-0 sm:bg-transparent sm:p-0">
+        <li><a class="focus-gold block rounded px-2 py-2 hover:text-[#d7c28a]" href="index.html">Home</a></li>
+        <li><a class="focus-gold block rounded px-2 py-2 hover:text-[#d7c28a]" href="shop.html">Shop</a></li>
+        <li><a class="focus-gold block rounded px-2 py-2 text-[#d7c28a]" href="about.html" aria-current="page">About</a></li>
+        <li><a class="focus-gold block rounded px-2 py-2 hover:text-[#d7c28a]" href="index.html#reviews">Reviews</a></li>
+        <li><a class="focus-gold block rounded px-2 py-2 hover:text-[#d7c28a]" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Intro banner -->
+    <section class="brand-bg relative overflow-hidden text-white">
+      <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border border-[#b49a5a]/25"></div>
+      <div class="pointer-events-none absolute -right-8 -top-12 h-56 w-56 rounded-full border border-[#b49a5a]/20"></div>
+      <div class="relative mx-auto max-w-5xl px-6 py-20 text-center sm:py-28">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.35em] brand-gold">Our story · Our vision</p>
+        <h1 class="text-4xl font-semibold tracking-tight sm:text-6xl">Designed with purpose.</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300 sm:text-xl">AU Divine Designs brings creativity and personal expression together through considered style and meaningful design.</p>
+        <div class="mx-auto mt-8 h-px w-24 bg-[#b49a5a]"></div>
+        <p class="mt-4 text-sm uppercase tracking-[0.3em] brand-gold">Light in Pieces</p>
+      </div>
     </section>
-    <footer class="py-6 bg-gray-900 text-white text-center">
-        <div class="container mx-auto px-6">
-            <p>© 2026 AU Divine Designs Collection. All rights reserved.</p>
+
+    <!-- About content -->
+    <section class="px-6 py-16 sm:py-24" aria-labelledby="about-heading">
+      <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#9b8043]">About the brand</p>
+          <h2 id="about-heading" class="text-3xl font-semibold leading-tight text-stone-900 sm:text-4xl">Style that reflects who you are.</h2>
+          <div class="mt-6 h-1 w-16 bg-[#b49a5a]"></div>
         </div>
-    </footer>
+        <div class="space-y-6 text-base leading-8 text-stone-600 sm:text-lg">
+          <p>AU Divine Designs is built around the idea that what you wear can express your individuality, confidence, and creativity. Our aim is to bring together thoughtful design, comfort, and a distinctive look in pieces made to feel personal.</p>
+          <p>From everyday streetwear to refined casual styles and accessories, we celebrate versatility and self-expression. We pay attention to the details that make a design feel special, while working toward choices that are considered and responsible.</p>
+          <p>Our name and tagline, <span class="font-semibold text-stone-800">“Light in Pieces,”</span> represent the beauty of individual details coming together to create something meaningful. We invite you to explore the collection and make each design your own.</p>
+          <a href="shop.html" class="gold-button focus-gold mt-2 inline-flex items-center gap-3 rounded-md px-6 py-3 font-semibold transition">Explore the collection <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand values -->
+    <section class="border-y border-stone-200 bg-white px-6 py-16 sm:py-20" aria-labelledby="values-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#9b8043]">What guides us</p>
+          <h2 id="values-heading" class="text-3xl font-semibold sm:text-4xl">The values behind every design</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-xl border border-stone-200 bg-[#faf9f5] p-7">
+            <span class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b49a5a] text-xl text-[#9b8043]" aria-hidden="true">✦</span>
+            <h3 class="mb-3 text-xl font-semibold">Individuality</h3>
+            <p class="leading-7 text-stone-600">Designs that encourage you to express your personality and wear your style with confidence.</p>
+          </article>
+          <article class="rounded-xl border border-stone-200 bg-[#faf9f5] p-7">
+            <span class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b49a5a] text-xl text-[#9b8043]" aria-hidden="true">◇</span>
+            <h3 class="mb-3 text-xl font-semibold">Careful design</h3>
+            <p class="leading-7 text-stone-600">A focus on the details, wearability, and balance that help each piece feel considered.</p>
+          </article>
+          <article class="rounded-xl border border-stone-200 bg-[#faf9f5] p-7">
+            <span class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#b49a5a] text-xl text-[#9b8043]" aria-hidden="true">☼</span>
+            <h3 class="mb-3 text-xl font-semibold">Creative expression</h3>
+            <p class="leading-7 text-stone-600">A belief that fashion can be a creative language for everyday life, special moments, and everything between.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-16 sm:py-20">
+      <div class="brand-bg mx-auto max-w-5xl rounded-2xl px-6 py-12 text-center text-white sm:px-12 sm:py-16">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] brand-gold">Find your expression</p>
+        <h2 class="text-3xl font-semibold sm:text-4xl">Make your style your own.</h2>
+        <p class="mx-auto mt-4 max-w-xl leading-7 text-stone-300">Discover AU Divine Designs and find pieces that speak to your individuality.</p>
+        <a href="shop.html" class="gold-button focus-gold mt-8 inline-block rounded-md px-7 py-3 font-semibold transition">Shop the collection</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="brand-bg border-t border-[#b49a5a]/40 px-6 py-8 text-center text-stone-300">
+    <a href="index.html" class="focus-gold inline-block text-lg font-semibold text-white">AU Divine Designs</a>
+    <p class="mt-1 text-xs uppercase tracking-[0.25em] brand-gold">Light in Pieces</p>
+    <p class="mt-4 text-sm">&copy; <span id="year">2026</span> AU Divine Designs. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (() => {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('site-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+          menu.classList.toggle('hidden', isOpen);
+          menu.classList.toggle('flex', !isOpen);
+        });
+        menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+          if (window.matchMedia('(max-width: 639px)').matches) {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+          }
+        }));
+      }
+      const year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+    })();
+  </script>
 </body>
 </html>
