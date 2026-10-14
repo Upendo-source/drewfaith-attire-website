@@ -1,105 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop DrewFaith Attire Collection for premium clothing and footwear.">
-    <title>Shop - DrewFaith Attire Collection</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore AU Divine Designs — thoughtfully designed apparel, signature embroidery and accessories. Light in Pieces.">
+  <meta name="theme-color" content="#252522">
+  <title>Shop | AU Divine Designs — Light in Pieces</title>
+  <style>
+    :root{--ink:#282824;--muted:#69675f;--cream:#f8f5ed;--paper:#fffdf8;--gold:#b49a5a;--gold-dark:#8d743d;--line:#e7dfce;--shadow:0 14px 40px #25252212}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.container{width:min(1160px,92%);margin:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:#252522f5;color:#fff;border-bottom:1px solid #b49a5a66;backdrop-filter:blur(12px)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:#d8c58d;font-family:Georgia,serif;font-size:19px}.brand-name{font:600 18px/1.2 Georgia,serif;letter-spacing:.02em}.brand-tag{display:block;color:#d8c58d;font-size:10px;letter-spacing:.2em;margin-top:4px}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{text-decoration:none;font-size:14px;color:#f5f0e4}.nav-links a:hover,.nav-links a:focus{color:#e2cc8e}.menu-toggle{display:none;background:transparent;border:1px solid #8f8056;color:white;border-radius:8px;padding:7px 11px}
+    .hero{background:radial-gradient(ellipse at 75% 20%,#b49a5a26,transparent 38%),linear-gradient(120deg,#262622,#3a3932);color:white;overflow:hidden}.hero-inner{min-height:440px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px;padding:64px 0}.eyebrow{text-transform:uppercase;letter-spacing:.23em;font-size:11px;font-weight:700;color:var(--gold-dark)}.hero .eyebrow{color:#d9c58b}.hero h1{font:500 clamp(38px,5vw,62px)/1.08 Georgia,'Times New Roman',serif;margin:15px 0 20px;max-width:650px}.hero p{color:#e4e0d6;max-width:560px;font-size:17px}.hero-art{position:relative;min-height:290px;display:grid;place-items:center}.hero-emblem{width:min(310px,80%);aspect-ratio:1;border:1px solid #b49a5a80;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 18px #b49a5a0c,0 0 0 42px #b49a5a08;color:#d5bf7d;font:clamp(75px,10vw,130px) Georgia,serif}.hero-emblem span{display:block;text-align:center;font-size:13px;letter-spacing:.3em;margin-top:-35px}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);border-radius:4px;padding:12px 20px;background:var(--gold);color:#211f19;text-decoration:none;font-weight:700;cursor:pointer;transition:background .2s,transform .2s}.button:hover{background:#c7b174;transform:translateY(-1px)}.button.secondary{background:transparent;color:var(--gold-dark)}.hero .button.secondary{color:#f1e5bd;border-color:#d2bc7a;margin-left:8px}
+    .section{padding:74px 0}.section.soft{background:var(--cream)}.section-heading{text-align:center;max-width:680px;margin:0 auto 34px}.section-heading h2{font:500 clamp(30px,4vw,43px)/1.15 Georgia,serif;margin:8px 0 12px}.section-heading p{color:var(--muted);margin:0}.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:0 auto 28px}.filter-btn{border:1px solid var(--line);background:white;color:var(--ink);padding:9px 16px;border-radius:99px;cursor:pointer}.filter-btn[aria-pressed=true],.filter-btn:hover{background:var(--ink);border-color:var(--ink);color:white}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.product-card{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.product-visual{aspect-ratio:4/3;background:linear-gradient(135deg,#eee8da,#faf8f1);display:grid;place-items:center;overflow:hidden}.product-visual img{width:100%;height:100%;object-fit:cover;display:block}.visual-placeholder{padding:25px;text-align:center;color:var(--gold-dark);font:italic 24px Georgia,serif}.product-copy{padding:21px;display:flex;flex-direction:column;align-items:flex-start;flex:1}.product-copy h3{font:500 23px Georgia,serif;margin:0 0 8px}.product-copy p{color:var(--muted);margin:0 0 18px;font-size:14px}.card-link{margin-top:auto;color:var(--gold-dark);font-weight:700;text-decoration:none;border-bottom:1px solid #b49a5a80;padding-bottom:3px}.card-link:hover{color:var(--ink)}.empty-message{text-align:center;color:var(--muted);grid-column:1/-1;padding:30px}
+    .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.story-art{min-height:300px;border-radius:8px;background:linear-gradient(145deg,#ded6c5,#f8f4e9);display:grid;place-items:center;border:1px solid var(--line)}.story-art .hero-emblem{width:200px;color:var(--gold-dark);box-shadow:none}.story-copy h2{font:500 clamp(32px,4vw,44px)/1.15 Georgia,serif;margin:10px 0 18px}.story-copy p{color:var(--muted)}.contact-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.contact-info h2{font:500 40px Georgia,serif;margin:8px 0 15px}.contact-info p{color:var(--muted)}.contact-form{background:white;border:1px solid var(--line);border-radius:8px;padding:25px;box-shadow:var(--shadow)}.field{margin-bottom:17px}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}.field input,.field textarea{width:100%;padding:12px 13px;border:1px solid #d9d2c4;border-radius:4px;background:#fffdf9;color:var(--ink)}.field input:focus,.field textarea:focus{outline:2px solid #b49a5a70;border-color:var(--gold)}.field textarea{min-height:130px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin:12px 0 0}.site-footer{background:#252522;color:#e9e4d8;padding:27px 0}.footer-row{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.footer-row p{margin:0;font-size:13px;color:#c8c2b5}.footer-links{display:flex;gap:20px}.footer-links a{font-size:13px;text-decoration:none}.footer-links a:hover{color:#d9c58b}.modal[hidden]{display:none}.modal{position:fixed;inset:0;z-index:50;background:#111c;display:grid;place-items:center;padding:20px}.modal-panel{background:var(--paper);width:min(580px,100%);max-height:85vh;overflow:auto;padding:27px;border-radius:8px;position:relative}.modal-panel h2{font:500 32px Georgia,serif;margin:0 0 10px}.modal-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px;cursor:pointer}.size-table{width:100%;border-collapse:collapse;margin:18px 0}.size-table th,.size-table td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}.size-table th{background:var(--cream)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:760px){.menu-toggle{display:block}.nav{min-height:68px}.nav-links{display:none;position:absolute;left:0;right:0;top:68px;background:#252522;padding:18px 4%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #b49a5a55}.nav-links.open{display:flex}.nav-links a{padding:12px 0}.hero-inner{grid-template-columns:1fr;padding:52px 0 38px;gap:5px}.hero-art{min-height:210px}.hero-emblem{width:180px}.hero-emblem span{margin-top:-22px}.section{padding:55px 0}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.product-copy{padding:15px}.product-copy h3{font-size:20px}.story,.contact-wrap{grid-template-columns:1fr;gap:27px}.story-art{min-height:230px}.story-art .hero-emblem{width:150px}}
+    @media(max-width:480px){.brand-name{font-size:16px}.brand-mark{width:37px;height:37px}.hero h1{font-size:39px}.hero .button.secondary{margin:10px 0 0}.hero .button{width:100%}.product-grid{grid-template-columns:1fr}.product-visual{aspect-ratio:5/3}.contact-form{padding:18px}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
 </head>
-<body class="font-sans antialiased text-gray-900 bg-gray-50">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">DrewFaith Attire</div>
-            <ul class="flex space-x-6">
-                <li><a href="shop.html" class="hover:text-gray-200">Shop</a></li>
-                <li><a href="about.html" class="hover:text-gray-200">About</a></li>
-                <li><a href="index.html#reviews" class="hover:text-gray-200">Reviews</a></li>
-                <li><a href="index.html#contact" class="hover:text-gray-200">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Shop Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-6">Shop Our Collection</h2>
-            <!-- Filters -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <button class="filter-btn px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700" data-filter="all">All</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="streetwear">Streetwear</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="sneakers">Sneakers</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="casual">Casual</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="accessories">Accessories</button>
-            </div>
-            <!-- Size Guide Button -->
-            <div class="text-center mb-8">
-                <a href="index.html#products" class="text-amber-600 font-semibold hover:underline">View Size Guide</a>
-            </div>
-            <!-- Products Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="streetwear">
-                    <img src="https://via.placeholder.com/300x200?text=Streetwear" alt="Streetwear" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Streetwear Vibes</h3>
-                    <p class="text-gray-600">$59.99</p>
-                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="sneakers">
-                    <img src="https://via.placeholder.com/300x200?text=Sneakers" alt="Sneakers" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Signature Sneakers</h3>
-                    <p class="text-gray-600">$89.99</p>
-                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="casual">
-                    <img src="https://via.placeholder.com/300x200?text=Casual" alt="Casual Wear" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Casual Elegance</h3>
-                    <p class="text-gray-600">$49.99</p>
-                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="accessories">
-                    <img src="https://via.placeholder.com/300x200?text=Accessories" alt="Accessories" class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Trendy Accessories</h3>
-                    <p class="text-gray-600">$29.99</p>
-                    <a href="#" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-6 bg-gray-900 text-white text-center">
-        <div class="container mx-auto px-6">
-            <p>© 2025 DrewFaith Attire Collection. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Product Filters
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productItems = document.querySelectorAll('.product-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
-                // Update button styles
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-amber-600', 'text-white');
-                    btn.classList.add('bg-gray-200', 'text-gray-900');
-                });
-                button.classList.remove('bg-gray-200', 'text-gray-900');
-                button.classList.add('bg-amber-600', 'text-white');
-
-                // Filter products
-                productItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="AU Divine Designs home"><span class="brand-mark" aria-hidden="true">AU</span><span class="brand-name">AU Divine Designs<span class="brand-tag">LIGHT IN PIECES</span></span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav">Menu ☰</button>
+      <nav class="nav-links" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a href="#collection">Shop</a><a href="#story">Our Story</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><div class="container hero-inner"><div><span class="eyebrow">Thoughtfully made. Distinctly divine.</span><h1>Wear your light.<br>Express your story.</h1><p>Discover AU Divine Designs — understated apparel, signature embroidery and finishing touches inspired by our mantra, <em>Light in Pieces</em>.</p><a class="button" href="#collection">Explore the Collection ↓</a><a class="button secondary" href="#contact">Custom Enquiries</a></div><div class="hero-art" aria-label="AU Divine Designs brand emblem"><div class="hero-emblem" aria-hidden="true">☼<span>AU DIVINE DESIGNS</span></div></div></div></section>
+    <section class="section" id="collection"><div class="container"><div class="section-heading"><span class="eyebrow">The collection</span><h2>Pieces with purpose</h2><p>Explore signature styles and custom details. Contact us for current availability, sizes and personalised orders.</p></div>
+      <div class="filters" role="group" aria-label="Filter products"><button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All pieces</button><button class="filter-btn" type="button" data-filter="apparel" aria-pressed="false">Apparel</button><button class="filter-btn" type="button" data-filter="branding" aria-pressed="false">Embroidery & branding</button><button class="filter-btn" type="button" data-filter="accessories" aria-pressed="false">Accessories</button></div>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="apparel"><div class="product-visual"><img src="assets/hoodie-cap-tshirt.png" alt="AU Divine Designs charcoal hoodie, cream T-shirt and cap with gold branding" loading="lazy" onerror="this.style.display='none'"></div><div class="product-copy"><h3>Signature Apparel</h3><p>Everyday staples in considered neutrals, finished with our emblem and gold-inspired details.</p><a class="card-link" href="#contact" data-product="Signature Apparel">Enquire about this style →</a></div></article>
+        <article class="product-card" data-category="apparel"><div class="product-visual"><img src="assets/embroidered-logo.png" alt="Close-up of AU Divine Designs embroidered logo on cream fabric" loading="lazy" onerror="this.style.display='none'"></div><div class="product-copy"><h3>Embroidered Essentials</h3><p>Subtle, tactile logo details for a personal finish on selected garments.</p><a class="card-link" href="#contact" data-product="Embroidered Essentials">Ask about sizing →</a></div></article>
+        <article class="product-card" data-category="branding"><div class="product-visual"><img src="assets/gold-logo-wall.png" alt="AU Divine Designs gold emblem and Light in Pieces wordmark" loading="lazy" onerror="this.style.display='none'"></div><div class="product-copy"><h3>Light in Pieces</h3><p>The signature mark and wordmark that bring the AU Divine Designs identity together.</p><a class="card-link" href="#contact" data-product="Light in Pieces branding">Ask about branding →</a></div></article>
+        <article class="product-card" data-category="accessories"><div class="product-visual"><img src="assets/gold-logo-emblem.png" alt="Gold AU Divine Designs emblem and wordmark" loading="lazy" onerror="this.style.display='none'"></div><div class="product-copy"><h3>Finishing Touches</h3><p>Elegant details inspired by the brand’s sun motif and warm gold palette.</p><a class="card-link" href="#contact" data-product="Finishing Touches">Enquire about accessories →</a></div></article>
+        <article class="product-card" data-category="apparel"><div class="product-visual"><div class="visual-placeholder">Comfort, with character.</div></div><div class="product-copy"><h3>Everyday Comfort</h3><p>Versatile wardrobe pieces designed to move with you from relaxed days to standout moments.</p><a class="card-link" href="#contact" data-product="Everyday Comfort">Enquire about this style →</a></div></article>
+        <article class="product-card" data-category="branding"><div class="product-visual"><div class="visual-placeholder">Your vision. Our detail.</div></div><div class="product-copy"><h3>Custom Designs</h3><p>Discuss personalised apparel, logo placement, embroidery and other custom design ideas.</p><a class="card-link" href="#contact" data-product="Custom Designs">Discuss a custom order →</a></div></article>
+      </div><p class="sr-only" id="filterStatus" aria-live="polite">Showing all pieces.</p><div style="text-align:center;margin-top:28px"><button class="button secondary" type="button" id="sizeGuideBtn">View Size Guide</button></div>
+    </div></section>
+    <section class="section soft" id="story"><div class="container story"><div class="story-art" aria-hidden="true"><div class="hero-emblem">☼<span>AU DIVINE DESIGNS</span></div></div><div class="story-copy"><span class="eyebrow">Our philosophy</span><h2>Light in Pieces</h2><p>AU Divine Designs brings together confident style, considered details and a versatile palette. From everyday essentials to standout finishing touches, each piece is designed to feel effortless and distinctive.</p><p>Have an idea in mind? We would love to hear what you are looking for and help you explore the options.</p><a class="button" href="#contact">Start an Enquiry</a></div></div></section>
+    <section class="section" id="reviews"><div class="container"><div class="section-heading"><span class="eyebrow">Community</span><h2>Made to mean something</h2><p>We value every person who chooses AU Divine Designs. Share your experience or ask us about a piece you have in mind.</p><a class="button secondary" href="#contact" style="margin-top:18px">Send Feedback</a></div></div></section>
+    <section class="section soft" id="contact"><div class="container contact-wrap"><div class="contact-info"><span class="eyebrow">Get in touch</span><h2>Let’s create something meaningful.</h2><p>Ask about products, availability, sizing, embroidery or a custom design. Fill in the form and your enquiry will be sent securely through Formspree.</p><p><strong>AU Divine Designs</strong><br><em>Light in Pieces</em></p></div>
+      <form class="contact-form" action="https://formspree.io/f/xrpeyvev" method="POST" id="contactForm"><input type="hidden" name="_subject" value="New enquiry — AU Divine Designs"><div class="field"><label for="contactName">Your name</label><input id="contactName" name="name" autocomplete="name" required maxlength="100" placeholder="Enter your name"></div><div class="field"><label for="contactEmail">Email address</label><input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div><div class="field"><label for="contactProduct">What are you interested in? (optional)</label><input id="contactProduct" name="product" maxlength="150" placeholder="e.g. Signature Apparel"></div><div class="field"><label for="contactMessage">Your message</label><textarea id="contactMessage" name="message" required maxlength="3000" placeholder="Tell us what you are looking for"></textarea></div><button class="button" type="submit">Send Enquiry →</button><p class="form-note">Submitting opens the Formspree submission flow. Make sure your Formspree form is active and test it before publishing.</p></form>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><p>© <span id="year"></span> AU Divine Designs. All rights reserved.</p><div class="footer-links"><a href="#collection">Collection</a><a href="#reviews">Community</a><a href="#contact">Contact</a></div></div></footer>
+  <div class="modal" id="sizeGuideModal" hidden><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="sizeGuideTitle" tabindex="-1"><button class="modal-close" id="closeModalBtn" type="button" aria-label="Close size guide">×</button><h2 id="sizeGuideTitle">General Size Guide</h2><p>Use this as a starting point only. Fit may vary by garment; contact us to confirm measurements before ordering.</p><div style="overflow-x:auto"><table class="size-table"><thead><tr><th scope="col">Size</th><th scope="col">Chest (in)</th><th scope="col">Waist (in)</th><th scope="col">Shoe (US)</th></tr></thead><tbody><tr><td>S</td><td>34–36</td><td>28–30</td><td>7–8</td></tr><tr><td>M</td><td>38–40</td><td>32–34</td><td>8.5–9.5</td></tr><tr><td>L</td><td>42–44</td><td>36–38</td><td>10–11</td></tr><tr><td>XL</td><td>46–48</td><td>40–42</td><td>11.5–12</td></tr></tbody></table></div><button class="button" id="doneModalBtn" type="button">Done</button></div></div>
+  <script>
+    (() => {
+      'use strict';
+      const menuToggle = document.getElementById('menuToggle');
+      const primaryNav = document.getElementById('primaryNav');
+      menuToggle.addEventListener('click', () => { const open = primaryNav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); });
+      primaryNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { primaryNav.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); }));
+      const filterButtons = [...document.querySelectorAll('.filter-btn')];
+      const productCards = [...document.querySelectorAll('.product-card')];
+      const filterStatus = document.getElementById('filterStatus');
+      filterButtons.forEach(button => button.addEventListener('click', () => {
+        const filter = button.dataset.filter; let visible = 0;
+        filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        productCards.forEach(card => { const show = filter === 'all' || card.dataset.category === filter; card.hidden = !show; if(show) visible++; });
+        filterStatus.textContent = `Showing ${visible} ${filter === 'all' ? 'pieces' : filter + ' pieces'}.`;
+      }));
+      const modal = document.getElementById('sizeGuideModal'); const modalPanel = modal.querySelector('.modal-panel');
+      const openModal = () => { modal.hidden = false; modalPanel.focus(); document.getElementById('closeModalBtn').focus(); };
+      const closeModal = () => { modal.hidden = true; document.getElementById('sizeGuideBtn').focus(); };
+      document.getElementById('sizeGuideBtn').addEventListener('click', openModal);
+      document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+      document.getElementById('doneModalBtn').addEventListener('click', closeModal);
+      modal.addEventListener('click', event => { if(event.target === modal) closeModal(); });
+      document.addEventListener('keydown', event => { if(event.key === 'Escape' && !modal.hidden) closeModal(); });
+      document.querySelectorAll('[data-product]').forEach(link => link.addEventListener('click', () => { const field = document.getElementById('contactProduct'); field.value = link.dataset.product; }));
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
