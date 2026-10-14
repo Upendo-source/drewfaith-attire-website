@@ -1,290 +1,438 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J22FNJG4B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3J22FNJG4B');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop AU Divine Designs Collection for premium clothing and footwear. Elevate your style today!">
-    <title>AU Divine Designs Collection</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover AU Divine Designs: elevated clothing, footwear and accessories made for comfort, quality and confident style.">
+  <meta name="theme-color" content="#8b6425">
+  <title>AU Divine Designs | Light in Pieces</title>
+  <link rel="preload" as="image" href="assets/hero-banner.png">
+  <style>
+    :root {
+      color-scheme: light;
+      --gold: #a8792b;
+      --gold-dark: #76501b;
+      --cream: #f8f5ee;
+      --ink: #29251e;
+      --muted: #6f6a60;
+      --line: #e7dfd0;
+      --shadow: 0 12px 35px rgba(53, 39, 17, .10);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #c99b4d; outline-offset: 3px; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .nav-row { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; display: inline-flex; align-items: center; gap: 12px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); font-weight: 700; letter-spacing: -.03em; color: var(--gold-dark); }
+    .brand-mark { width: 42px; height: 42px; object-fit: contain; border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: clamp(12px, 2.4vw, 30px); margin: 0; padding: 0; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: .95rem; font-weight: 650; color: #494236; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta, .button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border: 1px solid var(--gold); border-radius: 999px; background: var(--gold); color: white; padding: 11px 20px; text-decoration: none; font-weight: 700; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .nav-cta:hover, .button:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .menu-toggle { display: none; border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; background: white; color: var(--ink); cursor: pointer; }
+    .hero { background: var(--cream); }
+    .hero-banner { width: 100%; height: auto; max-height: 760px; object-fit: cover; }
+    .hero-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; padding: 0 20px 36px; }
+    .button.secondary { background: transparent; color: var(--gold-dark); }
+    .button.secondary:hover { background: #efe5d2; }
+    section { scroll-margin-top: 88px; }
+    .section { padding: 76px 0; }
+    .section.soft { background: var(--cream); }
+    .section-heading { text-align: center; max-width: 700px; margin: 0 auto 34px; }
+    .eyebrow { color: var(--gold-dark); text-transform: uppercase; letter-spacing: .17em; font-size: .78rem; font-weight: 800; }
+    h1, h2, h3 { line-height: 1.2; }
+    h2 { margin: 8px 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; }
+    .section-heading p, .intro { color: var(--muted); }
+    .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; margin: 0 0 28px; }
+    .filter-btn { border: 1px solid var(--line); border-radius: 999px; background: white; color: #4d463a; padding: 9px 16px; cursor: pointer; font-weight: 650; }
+    .filter-btn[aria-pressed="true"], .filter-btn:hover { background: var(--gold); color: white; border-color: var(--gold); }
+    .carousel-shell { position: relative; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .product-card { min-width: 0; overflow: hidden; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .product-card[hidden] { display: none !important; }
+    .product-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #f1eee7; }
+    .product-copy { padding: 20px; }
+    .product-copy h3 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
+    .product-copy p { margin: 0; color: var(--muted); }
+    .card-link { display: inline-block; margin-top: 14px; color: var(--gold-dark); font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .carousel-controls { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
+    .carousel-arrow { width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: white; color: var(--gold-dark); cursor: pointer; font-size: 1.2rem; }
+    .carousel-arrow:disabled { opacity: .35; cursor: not-allowed; }
+    .brand-story { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(28px, 5vw, 64px); }
+    .story-image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .story-copy p { color: var(--muted); }
+    .story-copy .button { margin-top: 12px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .review-card { padding: 24px; background: white; border: 1px solid var(--line); border-radius: var(--radius); }
+    .review-card p { margin: 0 0 12px; color: var(--muted); }
+    .review-card strong { color: var(--gold-dark); }
+    .contact-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 42px; align-items: start; }
+    .contact-details p { color: var(--muted); }
+    .contact-form { display: grid; gap: 15px; }
+    .field { display: grid; gap: 6px; }
+    .field label { font-weight: 700; font-size: .93rem; }
+    .field input, .field textarea { width: 100%; border: 1px solid #d8d0c2; border-radius: 12px; padding: 12px 14px; background: white; color: var(--ink); }
+    .field textarea { min-height: 140px; resize: vertical; }
+    .form-note { margin: 0; color: var(--muted); font-size: .9rem; }
+    .site-footer { background: #29251e; color: #f7f1e6; padding: 30px 0; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-row p { margin: 0; color: #ded4c1; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { color: #f7f1e6; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+    .modal[hidden] { display: none; }
+    .modal { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 18px; background: rgba(25, 21, 15, .65); }
+    .modal-panel { position: relative; width: min(640px, 100%); max-height: min(85vh, 800px); overflow: auto; padding: 28px; background: white; border-radius: 18px; box-shadow: 0 25px 80px rgba(0,0,0,.25); }
+    .modal-panel h2 { font-size: 2rem; }
+    .modal-close { float: right; border: 1px solid var(--line); border-radius: 50%; width: 40px; height: 40px; background: white; cursor: pointer; }
+    .size-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .92rem; }
+    .size-table th, .size-table td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .size-table th { background: var(--cream); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-width: 820px) {
+      .menu-toggle { display: inline-flex; align-items: center; gap: 8px; }
+      .nav-cta { display: none; }
+      .nav-links { display: none; position: absolute; top: calc(100% + 1px); left: 0; right: 0; padding: 14px 20px 20px; background: white; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { display: block; padding: 12px 6px; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contact-panel { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .nav-row { min-height: 66px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .brand { gap: 8px; }
+      .section { padding: 54px 0; }
+      .product-grid { grid-template-columns: 1fr; gap: 16px; }
+      .hero-actions { padding-bottom: 26px; }
+      .modal-panel { padding: 20px; }
+      .size-table th, .size-table td { padding: 7px 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
 </head>
-<body class="font-sans antialiased text-gray-900 bg-gray-50">
-    <!-- Header with Sticky Navigation -->
-    <header class="Images/AU Divine Designs_Elevate Your Style.png forEach from-amber-500 to-red-500 text-white sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">AU Divine Designs</div>
-            <ul class="flex space-x-6">
-                <li><a href="shop.html" class="hover:text-gray-200">Shop</a></li>
-                <li><a href="about.html" class="hover:text-gray-200">About</a></li>
-                <li><a href="#reviews" class="hover:text-gray-200">Reviews</a></li>
-                <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
+  <header class="site-header">
+    <nav class="container nav-row" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="AU Divine Designs home">
+        <img class="brand-mark" src="assets/gold-logo-emblem.png" alt="" width="42" height="42">
+        <span>AU Divine Designs</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span aria-hidden="true">☰</span><span>Menu</span>
+      </button>
+      <ul class="nav-links" id="primaryNav">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="#collection">Explore Collection</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-amber-500 to-red-500 text-white">
-        <div class="container mx-auto px-6 py-20 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Elevate Your Style with AU Divine Designs</h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Premium clothing and footwear crafted for comfort, quality, and bold fashion.</p>
-            <a href="shop.html" class="inline-block bg-white text-amber-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Shop Now</a>
-        </div>
+  <main id="home">
+    <section class="hero" aria-label="AU Divine Designs introduction">
+      <img class="hero-banner" src="assets/hero-banner.png" alt="AU Divine Designs — Light in Pieces. Elevate your style with bold clothing and footwear." width="1672" height="940" fetchpriority="high">
+      <div class="hero-actions">
+        <a class="button" href="#collection">Explore the Collection</a>
+        <a class="button secondary" href="#contact">Get in Touch</a>
+      </div>
     </section>
 
-    <!-- Products Section with Filters and Carousel -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-6">Our Collection</h2>
-            <!-- Filters -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <button class="filter-btn px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700" data-filter="all">All</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="streetwear">Streetwear</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="sneakers">Sneakers</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="casual">Casual</button>
-                <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300" data-filter="accessories">Accessories</button>
-            </div>
-            <!-- Size Guide Button -->
-            <div class="text-center mb-8">
-                <button id="sizeGuideBtn" class="text-amber-600 font-semibold hover:underline">View Size Guide</button>
-            </div>
-            <!-- Carousel -->
-            <div class="relative overflow-hidden">
-                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="streetwear">
-                        <img src="https://via.placeholder.com/300x200?text=Streetwear" alt="Streetwear" class="w-full h-48 object-cover rounded-md mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Streetwear Vibes</h3>
-                        <p class="text-gray-600">Bold, urban-inspired clothing for the modern trendsetter.</p>
-                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
-                    </div>
-                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="sneakers">
-                        <img src="https://via.placeholder.com/300x200?text=Sneakers" alt="Sneakers" class="w-full h-48 object-cover rounded-md mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Signature Sneakers</h3>
-                        <p class="text-gray-600">Step up your game with stylish, comfortable footwear.</p>
-                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
-                    </div>
-                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="casual">
-                        <img src="https://via.placeholder.com/300x200?text=Casual" alt="Casual Wear" class="w-full h-48 object-cover rounded-md mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Casual Elegance</h3>
-                        <p class="text-gray-600">Effortless style for everyday wear, crafted with care.</p>
-                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
-                    </div>
-                    <div class="min-w-full md:min-w-[33.33%] p-6 bg-gray-50 rounded-lg shadow-md text-center product-item" data-category="accessories">
-                        <img src="https://via.placeholder.com/300x200?text=Accessories" alt="Accessories" class="w-full h-48 object-cover rounded-md mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Trendy Accessories</h3>
-                        <p class="text-gray-600">Complete your look with our curated hats and bags.</p>
-                        <a href="shop.html" class="inline-block mt-4 text-amber-600 font-semibold hover:underline">Shop Now</a>
-                    </div>
-                </div>
-                <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700">←</button>
-                <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-700">→</button>
-            </div>
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Made to stand out</span>
+          <h2>Discover the Collection</h2>
+          <p>Thoughtful details, refined finishes and everyday pieces designed to help you express your style.</p>
         </div>
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All pieces</button>
+          <button class="filter-btn" type="button" data-filter="clothing" aria-pressed="false">Clothing</button>
+          <button class="filter-btn" type="button" data-filter="accessories" aria-pressed="false">Accessories</button>
+          <button class="filter-btn" type="button" data-filter="branding" aria-pressed="false">Brand details</button>
+        </div>
+        <div class="carousel-shell">
+          <div class="product-grid" id="productGrid" aria-live="polite">
+            <article class="product-card" data-category="clothing">
+              <img class="product-image" src="assets/hoodie-cap-tshirt.png" alt="Charcoal AU Divine Designs hoodie with matching cream T-shirt and cap" width="912" height="1180" loading="lazy" decoding="async">
+              <div class="product-copy"><h3>Signature Essentials</h3><p>Layered everyday staples in a charcoal and cream palette, finished with the AU Divine Designs emblem.</p><a class="card-link" href="#contact">Enquire about this style →</a></div>
+            </article>
+            <article class="product-card" data-category="clothing">
+              <img class="product-image" src="assets/hoodie-cap-tshirt-detail.png" alt="AU Divine Designs branded hoodie, cap and T-shirt styled on a marble background" width="912" height="1029" loading="lazy" decoding="async">
+              <div class="product-copy"><h3>Elevated Streetwear</h3><p>Comfort-led streetwear with understated branding and a premium neutral finish.</p><a class="card-link" href="#contact">Enquire about this style →</a></div>
+            </article>
+            <article class="product-card" data-category="branding">
+              <img class="product-image" src="assets/embroidered-logo.png" alt="Close-up of AU Divine Designs embroidered logo on cream fabric" width="472" height="482" loading="lazy" decoding="async">
+              <div class="product-copy"><h3>Signature Embroidery</h3><p>Fine logo details in warm metallic and tonal thread for a distinctive finish.</p><a class="card-link" href="#contact">Ask about customisation →</a></div>
+            </article>
+            <article class="product-card" data-category="branding">
+              <img class="product-image" src="assets/gold-logo-wall.png" alt="AU Divine Designs gold emblem and Light in Pieces wordmark on a textured wall" width="904" height="792" loading="lazy" decoding="async">
+              <div class="product-copy"><h3>Light in Pieces</h3><p>The signature mark and wordmark that bring the AU Divine Designs identity together.</p><a class="card-link" href="#contact">Ask about branding →</a></div>
+            </article>
+            <article class="product-card" data-category="accessories">
+              <img class="product-image" src="assets/gold-logo-emblem.png" alt="Gold AU Divine Designs emblem and wordmark on a light textured background" width="905" height="833" loading="lazy" decoding="async">
+              <div class="product-copy"><h3>Finishing Touches</h3><p>Elegant details inspired by the brand’s sun-and-motion emblem and gold palette.</p><a class="card-link" href="#contact">Enquire about accessories →</a></div>
+            </article>
+          </div>
+          <div class="carousel-controls" aria-label="Product navigation">
+            <button class="carousel-arrow" id="prevBtn" type="button" aria-label="Previous products" disabled>←</button>
+            <button class="carousel-arrow" id="nextBtn" type="button" aria-label="Next products" disabled>→</button>
+          </div>
+          <p class="sr-only" id="filterStatus" aria-live="polite">Showing all pieces.</p>
+        </div>
+        <div style="text-align:center;margin-top:24px">
+          <button class="button secondary" id="sizeGuideBtn" type="button">View Size Guide</button>
+        </div>
+      </div>
     </section>
 
-    <!-- Size Guide Modal -->
-    <div id="sizeGuideModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white p-6 rounded-lg max-w-2xl w-full">
-            <h3 class="text-2xl font-bold mb-4">Size Guide</h3>
-            <p class="text-gray-600 mb-4">Use our size chart to find the perfect fit for DrewFaith clothing and footwear.</p>
-            <img src="https://via.placeholder.com/600x400?text=Size+Chart" alt="Size Chart" class="w-full mb-4">
-            <table class="w-full text-left border-collapse mb-4">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="p-2">Size</th>
-                        <th class="p-2">Chest (in)</th>
-                        <th class="p-2">Waist (in)</th>
-                        <th class="p-2">Shoe (US)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="p-2">S</td><td class="p-2">34-36</td><td class="p-2">28-30</td><td class="p-2">7-8</td></tr>
-                    <tr><td class="p-2">M</td><td class="p-2">38-40</td><td class="p-2">32-34</td><td class="p-2">8.5-9.5</td></tr>
-                    <tr><td class="p-2">L</td><td class="p-2">42-44</td><td class="p-2">36-38</td><td class="p-2">10-11</td></tr>
-                    <tr><td class="p-2">XL</td><td class="p-2">46-48</td><td class="p-2">40-42</td><td class="p-2">11.5-12</td></tr>
-                </tbody>
-            </table>
-            <button id="closeModalBtn" class="bg-amber-600 text-white py-2 px-4 rounded-lg hover:bg-amber-700">Close</button>
+    <section class="section soft" id="story">
+      <div class="container brand-story">
+        <img class="story-image" src="assets/gold-logo-wall.png" alt="AU Divine Designs gold logo representing the Light in Pieces brand" width="904" height="792" loading="lazy" decoding="async">
+        <div class="story-copy">
+          <span class="eyebrow">Our philosophy</span>
+          <h2>Light in Pieces</h2>
+          <p class="intro">AU Divine Designs brings together confident style, considered details and a versatile palette. From everyday essentials to standout finishing touches, each piece is designed to feel effortless and distinctive.</p>
+          <p>Explore the collection and contact us to ask about availability, sizing or custom branding.</p>
+          <a class="button" href="#contact">Start an Enquiry</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Your style, your story</span>
+          <h2>Community & Feedback</h2>
+          <p>We value every customer and welcome your thoughts on our designs and service.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card"><p>“The neutral colours and gold branding create a clean, premium look.”</p><strong>Brand direction</strong></article>
+          <article class="review-card"><p>“Comfortable everyday pieces with a distinctive signature detail.”</p><strong>Collection concept</strong></article>
+          <article class="review-card"><p>“A refined identity that works across clothing and accessories.”</p><strong>Design approach</strong></article>
+        </div>
+        <p class="form-note" style="text-align:center;margin-top:18px">These are brand-positioning statements, not verified customer testimonials. Replace them with genuine customer reviews when available.</p>
+      </div>
+    </section>
+
+    <section class="section soft" id="contact">
+      <div class="container contact-panel">
+        <div class="contact-details">
+          <span class="eyebrow">Let’s connect</span>
+          <h2>Get in Touch</h2>
+          <p>Interested in an item, sizing or a custom design? Send an enquiry and include the piece you have in mind.</p>
+          <p><strong>AU Divine Designs</strong><br>Light in Pieces</p>
+          <p class="form-note">Messages are submitted securely through Formspree once you replace the placeholder form ID with your own Formspree endpoint.</p>
+        </div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xrpeyvev" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry — AU Divine Designs">
+          <div class="field"><label for="contactName">Your name</label><input id="contactName" name="name" autocomplete="name" required maxlength="100" placeholder="Enter your name"></div>
+          <div class="field"><label for="contactEmail">Email address</label><input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div>
+          <div class="field"><label for="contactMessage">How can we help?</label><textarea id="contactMessage" name="message" required maxlength="3000" placeholder="Tell us what you are looking for"></textarea></div>
+          <button class="button" type="submit">Send Enquiry</button>
+          <p class="form-note">Your browser will submit this form to Formspree. Configure your Formspree form and test a submission before publishing.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> AU Divine Designs. All rights reserved.</p>
+      <div class="footer-links"><a href="#collection">Collection</a><a href="#reviews">Community</a><a href="#contact">Contact</a></div>
     </div>
+  </footer>
 
-    <!-- Social Media Feed Section -->
-    <section id="social" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Join Our Community</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-8">
-                <a href="https://instagram.com" target="_blank" class="text-amber-600 font-semibold hover:underline">Follow us on Instagram & X</a>
-            </div>
-        </div>
-    </section>
+  <div class="modal" id="sizeGuideModal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="sizeGuideTitle" tabindex="-1">
+      <button class="modal-close" id="closeModalBtn" type="button" aria-label="Close size guide">×</button>
+      <h2 id="sizeGuideTitle">Size Guide</h2>
+      <p>Use this general guide as a starting point. Confirm actual measurements and shoe sizing for each product before ordering.</p>
+      <div style="overflow-x:auto">
+        <table class="size-table">
+          <thead><tr><th scope="col">Size</th><th scope="col">Chest (in)</th><th scope="col">Waist (in)</th><th scope="col">Shoe (US)</th></tr></thead>
+          <tbody>
+            <tr><td>S</td><td>34–36</td><td>28–30</td><td>7–8</td></tr>
+            <tr><td>M</td><td>38–40</td><td>32–34</td><td>8.5–9.5</td></tr>
+            <tr><td>L</td><td>42–44</td><td>36–38</td><td>10–11</td></tr>
+            <tr><td>XL</td><td>46–48</td><td>40–42</td><td>11.5–12</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="button" id="doneModalBtn" type="button">Done</button>
+    </div>
+  </div>
 
-    <!-- CTA Section with Mailchimp Email Signup -->
-    <section id="cta" class="py-20 bg-amber-600 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Limited-Time Offer!</h2>
-            <p class="text-lg mb-4 max-w-xl mx-auto">Get 20% off your first purchase. Offer ends soon!</p>
-            <div id="countdown" class="text-xl font-semibold mb-8">
-                <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
-            </div>
-            <!-- Mailchimp Signup Form -->
-            <div class="flex justify-center">
-                <!-- Replace YOUR_MAILCHIMP_FORM_ACTION with your Mailchimp form action URL -->
-                <form action="YOUR_MAILCHIMP_FORM_ACTION" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex justify-center">
-                    <input type="email" name="EMAIL" placeholder="Enter your email" class="py-3 px-4 rounded-l-lg text-gray-900 focus:outline-none" required>
-                    <button type="submit" class="bg-red-600 py-3 px-6 rounded-r-lg font-semibold hover:bg-red-700 transition">Subscribe</button>
-                </form>
-            </div>
-            <p class="text-sm mt-4">Sign up to join our mailing list. You can unsubscribe at any time.</p>
-        </div>
-    </section>
+  <script>
+    (() => {
+      'use strict';
 
-    <!-- Contact Section with Formspree -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
-            <div class="max-w-lg mx-auto">
-                <!-- Formspree Form -->
-                <form action="https://formspree.io/f/xyzwzdye" method="POST" id="contact-form">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission">
-                    <input type="hidden" name="_next" value="/#contact">
-                    <div class="mb-6">
-                        <label for="name" class="block text-gray-700 mb-2">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                        <input type="email" name="_replyto" id="email" placeholder="Your Email" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 mb-2">Message</label>
-                        <textarea name="message" id="message" placeholder="Your Message" class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:border-amber-600 h-32" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-amber-700 transition">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+      const menuToggle = document.getElementById('menuToggle');
+      const primaryNav = document.getElementById('primaryNav');
 
-    <!-- Footer -->
-    <footer class="py-6 bg-gray-900 text-white text-center">
-        <div class="container mx-auto px-6">
-            <p>© 2026 AU Divine Designs Collection. All rights reserved.</p>
-        </div>
-    </footer>
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        primaryNav.classList.toggle('is-open', !isOpen);
+      });
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+      primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          primaryNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
         });
+      });
 
-        // Product Carousel
-        const carousel = document.getElementById('carousel');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 0;
-        const totalItems = carousel.children.length;
-        const isMobile = window.innerWidth < 768;
-
-        function updateCarousel() {
-            const itemWidth = isMobile ? 100 : 33.33;
-            carousel.style.transform = `translateX(-${currentIndex * itemWidth}%)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalItems;
-            updateCarousel();
+      // Only intercept same-page links whose targets actually exist.
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', event => {
+          const href = link.getAttribute('href');
+          if (!href || href === '#') return;
+          const target = document.getElementById(href.slice(1));
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+          if (history.replaceState) history.replaceState(null, '', href);
         });
+      });
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-            updateCarousel();
+      const grid = document.getElementById('productGrid');
+      const cards = Array.from(grid.querySelectorAll('.product-card'));
+      const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const filterStatus = document.getElementById('filterStatus');
+      let activeFilter = 'all';
+      let pageIndex = 0;
+
+      function visibleCards() {
+        return cards.filter(card => !card.hidden);
+      }
+
+      function cardsPerPage() {
+        if (window.matchMedia('(max-width: 560px)').matches) return 1;
+        if (window.matchMedia('(max-width: 820px)').matches) return 2;
+        return 3;
+      }
+
+      function maxPageIndex() {
+        return Math.max(0, Math.ceil(visibleCards().length / cardsPerPage()) - 1);
+      }
+
+      function updateCarousel() {
+        const visible = visibleCards();
+        const perPage = cardsPerPage();
+        pageIndex = Math.min(Math.max(0, pageIndex), maxPageIndex());
+        const start = pageIndex * perPage;
+        visible.forEach((card, index) => {
+          card.hidden = index < start || index >= start + perPage;
         });
+        prevBtn.disabled = pageIndex === 0;
+        nextBtn.disabled = pageIndex >= maxPageIndex();
+        const shown = Math.min(perPage, Math.max(0, visible.length - start));
+        filterStatus.textContent = `Showing ${shown} of ${visible.length} matching pieces.`;
+      }
 
-        // Auto-scroll carousel every 5 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalItems;
-            updateCarousel();
-        }, 5000);
-
-        // Product Filters
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productItems = document.querySelectorAll('.product-item');
-
+      function applyFilter(filter) {
+        activeFilter = filter;
+        cards.forEach(card => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+        // Rebuild visibility from the selected category before paging.
+        const matching = cards.filter(card => filter === 'all' || card.dataset.category === filter);
+        matching.forEach(card => { card.hidden = false; });
         filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
-                // Update button- button styles
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-amber-600', 'text-white');
-                    btn.classList.add('bg-gray-200', 'text-gray-900');
-                });
-                button.classList.remove('bg-gray-200', 'text-gray-900');
-                button.classList.add('bg-amber-600', 'text-white');
-
-                // Filter products
-                productItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-                // Reset carousel to first item
-                currentIndex = 0;
-                updateCarousel();
-            });
+          button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
         });
+        pageIndex = 0;
+        updateCarousel();
+      }
 
-        // Size Guide Modal
-        const sizeGuideBtn = document.getElementById('sizeGuideBtn');
-        const sizeGuideModal = document.getElementById('sizeGuideModal');
-        const closeModalBtn = document.getElementById('closeModalBtn');
+      // Hidden cards are also used for paging, so keep a separate category predicate.
+      function getMatchingCards() {
+        return cards.filter(card => activeFilter === 'all' || card.dataset.category === activeFilter);
+      }
 
-        sizeGuideBtn.addEventListener('click', () => {
-            sizeGuideModal.classList.remove('hidden');
-        });
+      function renderPage() {
+        const matching = getMatchingCards();
+        const perPage = cardsPerPage();
+        const maxPage = Math.max(0, Math.ceil(matching.length / perPage) - 1);
+        pageIndex = Math.min(Math.max(0, pageIndex), maxPage);
+        cards.forEach(card => { card.hidden = true; });
+        matching.slice(pageIndex * perPage, (pageIndex + 1) * perPage).forEach(card => { card.hidden = false; });
+        prevBtn.disabled = pageIndex === 0;
+        nextBtn.disabled = pageIndex >= maxPage;
+        filterStatus.textContent = `Showing ${Math.min(perPage, Math.max(0, matching.length - pageIndex * perPage))} of ${matching.length} matching pieces.`;
+      }
 
-        closeModalBtn.addEventListener('click', () => {
-            sizeGuideModal.classList.add('hidden');
-        });
+      filterButtons.forEach(button => button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        pageIndex = 0;
+        filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        renderPage();
+      }));
+      prevBtn.addEventListener('click', () => { if (pageIndex > 0) { pageIndex--; renderPage(); } });
+      nextBtn.addEventListener('click', () => { if (pageIndex < Math.ceil(getMatchingCards().length / cardsPerPage()) - 1) { pageIndex++; renderPage(); } });
+      let resizeFrame;
+      window.addEventListener('resize', () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(renderPage);
+      });
+      renderPage();
 
-        // Countdown Timer
-        const countdownDate = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 7 days from now
-        const countdown = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+      const modal = document.getElementById('sizeGuideModal');
+      const modalPanel = modal.querySelector('.modal-panel');
+      const openModalBtn = document.getElementById('sizeGuideBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const doneModalBtn = document.getElementById('doneModalBtn');
+      let previousFocus = null;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      function openModal() {
+        previousFocus = document.activeElement;
+        modal.hidden = false;
+        modalPanel.focus();
+        document.addEventListener('keydown', onModalKeydown);
+      }
+      function closeModal() {
+        modal.hidden = true;
+        document.removeEventListener('keydown', onModalKeydown);
+        if (previousFocus) previousFocus.focus();
+      }
+      function onModalKeydown(event) {
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'Tab') {
+          const focusable = Array.from(modal.querySelectorAll('button, a, input, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.disabled);
+          if (!focusable.length) return;
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      }
+      openModalBtn.addEventListener('click', openModal);
+      closeModalBtn.addEventListener('click', closeModal);
+      doneModalBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
 
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById('countdown').textContent = 'Offer Expired!';
-            }
-        }, 1000);
-    </script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
-</html>  
+</html>
